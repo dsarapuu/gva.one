@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//api.salemove.com/salemove_integration.js"></script>
+    <title>AI Innovations - Unlocking the Future</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset & Font Imports */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #0d0d0d; /* Deep Black */
+            color: #e0e0e0; /* Light Gray for text */
+        }
+
+        /* Color Palette Variables */
+        :root {
+            --primary-purple: #4a148c; /* Deep Purple */
+            --secondary-green: #69f0ae; /* Bright Green Highlight */
+            --dark-background: #0d0d0d; /* Black */
+            --light-text: #e0e0e0; /* Light Gray */
+            --medium-purple: #6a1b9a; /* Slightly lighter purple for accents */
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-purple);
+            color: var(--light-text);
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.8rem;
+            margin: 0;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(13, 13, 13, 0.7), rgba(13, 13, 13, 0.7)), url('https://via.placeholder.com/1500x600/1a1a1a/69f0ae?text=AI+Future') no-repeat center center/cover;
+            /* Placeholder image, replace with your own AI-themed image */
+            /* Example: url('path/to/your/ai-background-image.jpg') */
+            height: 80vh; /* 80% of viewport height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--light-text);
+            padding: 2rem;
+        }
+
+        .hero h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-green);
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            max-width: 800px;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-green);
+            color: var(--dark-background);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero .cta-button:hover {
+            background-color: var(--light-text);
+            transform: translateY(-3px);
+            color: var(--primary-purple);
+        }
+
+        /* Section Styling */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section {
+            background-color: var(--dark-background);
+            padding: 4rem 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--primary-purple);
+        }
+
+        .section h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            color: var(--secondary-green);
+            text-align: center;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--medium-purple);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .section p {
+            font-size: 1.1rem;
+            text-align: justify;
+            margin-bottom: 1rem;
+            color: var(--light-text);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-purple);
+            color: var(--light-text);
+            text-align: center;
+            padding: 1.5rem 0;
+            font-size: 0.9rem;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .hero .cta-button {
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+            }
+
+            .section h3 {
+                font-size: 2rem;
+            }
+
+            .section p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            .section h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>AI Innovations</h1>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Pioneering the Future of Intelligence</h2>
+            <p>Exploring the boundless possibilities of Artificial Intelligence to shape a smarter, more connected world.</p>
+            <a href="#about-ai" class="cta-button">Learn More About AI</a>
+        </section>
+
+        <section id="about-ai" class="section container">
+            <h3>About Artificial Intelligence</h3>
+            <p>Artificial Intelligence (AI) refers to the simulation of human intelligence in machines that are programmed to think like humans and mimic their actions. The term may also be applied to any machine that exhibits traits associated with a human mind such as learning and problem-solving.</p>
+            <p>From powering personalized recommendations and optimizing complex logistics to driving autonomous vehicles and assisting in scientific discovery, AI is rapidly transforming every facet of our lives. It's not just about automation; it's about augmenting human capabilities and creating new possibilities that were once confined to science fiction.</p>
+            <p>Our vision is to harness this transformative power responsibly, developing intelligent systems that are ethical, efficient, and ultimately, beneficial to humanity. We believe in an AI-driven future where technology serves to elevate human potential and create a more intelligent, interconnected society.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 AI Innovations. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
